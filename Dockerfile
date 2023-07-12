@@ -14,8 +14,8 @@ RUN apt-get install -y lxterminal
 RUN apt-get install -y gmrun
 RUN apt-get install -y pcmanfm
 
-ARG PARAM_UID=8500
-ARG PARAM_GID=8500
+ARG PARAM_UID=8900
+ARG PARAM_GID=8900
 
 RUN groupadd -g "${PARAM_GID}" "vncuser" || true
 RUN adduser --disabled-password --uid "${PARAM_UID}" --gid "${PARAM_GID}" --gecos "vncuser" "vncuser"
@@ -38,6 +38,6 @@ ENV USER $USER
 WORKDIR /home/$USER
 
 ENV DISPLAY :99
-EXPOSE 5900
+EXPOSE 5800
 
 CMD "/opt/config/docker-entrypoint.sh"
