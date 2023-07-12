@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM debian:bullseye-slim
 
 MAINTAINER Paulo Murer
 
