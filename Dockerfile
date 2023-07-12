@@ -32,10 +32,10 @@ RUN rm -rf /etc/xdg/openbox && \
     (rm -rf /etc/xdg/tint2 || true) && \
     cp -R /opt/config/tint2 /etc/xdg/tint2
 
-USER vncuser
-ENV HOME /home/vncuser
-ENV USER vncuser
-WORKDIR /home/vncuser
+USER $USER
+ENV HOME /home/$USER
+ENV USER $USER
+WORKDIR /home/$USER
 
 ENV DISPLAY :99
 EXPOSE 5900
